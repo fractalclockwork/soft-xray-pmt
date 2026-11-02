@@ -1,0 +1,180 @@
+ERC report (2026-11-02T13:13:24, Encoding UTF8)
+Report includes: Errors, Warnings
+
+***** Sheet /
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(40.86 mm, 119.91 mm): Wire, length 3.414 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(45.19 mm, 92.57 mm): Wire, length 3.131 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(45.19 mm, 128.41 mm): Wire, length 3.131 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(48.11 mm, 117.55 mm): Wire, length 7.624 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(51.36 mm, 97.05 mm): Wire, length 7.625 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(51.36 mm, 123.93 mm): Wire, length 7.625 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(51.93 mm, 85.83 mm): Wire, length 3.131 mm
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(52.07 mm, 158.75 mm): Symbol C2 [C]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(56.41 mm, 92.00 mm): Wire, length 7.625 mm
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(59.69 mm, 171.45 mm): Symbol R3 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(59.69 mm, 177.80 mm): Symbol GND4 [GND]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(60.43 mm, 81.50 mm): Wire, length 3.414 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(60.43 mm, 139.48 mm): Wire, length 3.414 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(62.79 mm, 88.75 mm): Wire, length 7.624 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(62.79 mm, 132.23 mm): Wire, length 7.624 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(62.79 mm, 132.23 mm): Symbol U1 Pin 1 [D1, Passive, Line]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(67.31 mm, 158.75 mm): Symbol C3 [C]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(69.85 mm, 110.49 mm): Symbol U1 [XP3312]
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(76.91 mm, 88.75 mm): Wire, length 7.624 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(79.27 mm, 81.50 mm): Wire, length 3.414 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(83.29 mm, 92.00 mm): Wire, length 7.625 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(87.77 mm, 85.83 mm): Wire, length 3.131 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(91.59 mm, 117.55 mm): Wire, length 7.624 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(98.84 mm, 119.91 mm): Horizontal Wire, length 11.65 mm
+[endpoint_off_grid]: Symbol pin or wire end off connection grid
+    ; warning
+    @(110.49 mm, 119.91 mm): Vertical Wire, length 2.01 mm
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(111.76 mm, 130.81 mm): Symbol C1 [C]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(111.76 mm, 135.89 mm): Symbol GND1 [GND]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(119.38 mm, 121.92 mm): Symbol R1 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(143.51 mm, 88.90 mm): Symbol R2 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(143.51 mm, 95.25 mm): Symbol GND5 [GND]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(149.86 mm, 90.17 mm): Symbol J2 [COAX]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(149.86 mm, 97.79 mm): Symbol GND2 [GND]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(215.90 mm, 110.49 mm): Symbol J1 [HDR14]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'pmt'
+    ; warning
+    @(238.76 mm, 102.87 mm): Symbol GND3 [GND]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(38.10 mm, 16.51 mm): Symbol J3 [TERM2]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(55.88 mm, 66.04 mm): Symbol Rbleed [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(88.90 mm, 35.56 mm): Symbol R10 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(88.90 mm, 43.18 mm): Symbol R11 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(88.90 mm, 50.80 mm): Symbol R12 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(88.90 mm, 58.42 mm): Symbol R13 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(88.90 mm, 66.04 mm): Symbol R14 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(88.90 mm, 73.66 mm): Symbol R15 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(88.90 mm, 81.28 mm): Symbol R16 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(88.90 mm, 88.90 mm): Symbol R17 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(88.90 mm, 96.52 mm): Symbol R18 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(88.90 mm, 110.49 mm): Symbol GND1 [GND]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(114.30 mm, 128.27 mm): Symbol R20 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(134.62 mm, 128.27 mm): Symbol R21 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(134.62 mm, 140.97 mm): Symbol C5 [C]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(190.50 mm, 66.04 mm): Symbol J4 [HDR14]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(233.68 mm, 43.18 mm): Symbol R19 [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(233.68 mm, 55.88 mm): Symbol JMP_DC [JMP]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(233.68 mm, 66.04 mm): Symbol C4 [C]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(254.00 mm, 48.26 mm): Symbol J5 [BNC]
+
+***** Sheet /Bringup Supply/
+[multiple_net_names]: Both -HV and K are attached to the same items; -HV will be used in the netlist
+    ; warning
+    @(38.10 mm, 8.89 mm): Label '-HV'
+    @(96.52 mm, 31.75 mm): Label 'K'
+
+ ** ERC messages: 55  Errors 0  Warnings 55
+
+ ** Ignored checks:
+    - Global label only appears once in the schematic
+    - Four connection points are joined together
+    - SPICE model issue
+    - Assigned footprint doesn't match footprint filters

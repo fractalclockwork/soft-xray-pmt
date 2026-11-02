@@ -1,0 +1,31 @@
+* Gate 0c OP — KiCad bringup-supply
+.title KiCad schematic
+.title bringup-supply Gate 0c (KiCad export)
+Vhv K GND DC -1000 
+R10 K D1 4.4Meg
+R11 D1 D2 3.3Meg
+R12 D2 D3 3.3Meg
+Ca A GND 15p
+Ra A GND 1.1Meg
+Iph A GND PULSE( 0 3.6m 50n 0.5n 0.5n 10n 1 ) 
+R13 D3 D4 3.3Meg
+R16 D6 D7 2.2Meg
+Rbleed K GND 22Meg
+R17 D7 D8 2.2Meg
+R18 D8 GND 1.1Meg
+R14 D4 D5 2.2Meg
+R15 D5 D6 2.2Meg
+.control
+  op
+  echo TAP_K = $&v(K)
+  echo TAP_D1 = $&v(D1)
+  echo TAP_D2 = $&v(D2)
+  echo TAP_D3 = $&v(D3)
+  echo TAP_D4 = $&v(D4)
+  echo TAP_D5 = $&v(D5)
+  echo TAP_D6 = $&v(D6)
+  echo TAP_D7 = $&v(D7)
+  echo TAP_D8 = $&v(D8)
+  echo I_VHV = $&i(Vhv)
+.endc
+.end

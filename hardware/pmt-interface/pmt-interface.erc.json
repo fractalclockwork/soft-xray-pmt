@@ -1,0 +1,40 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-11-02T13:13:32",
+    "ignored_checks": [
+        {
+            "description": "Global label only appears once in the schematic",
+            "key": "single_global_label"
+        },
+        {
+            "description": "Four connection points are joined together",
+            "key": "four_way_junction"
+        },
+        {
+            "description": "SPICE model issue",
+            "key": "simulation_model_issue"
+        },
+        {
+            "description": "Assigned footprint doesn't match footprint filters",
+            "key": "footprint_filter"
+        }
+    ],
+    "included_severities": [
+        "error"
+    ],
+    "kicad_version": "10.0.7",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/b119dbe0-3125-5f0c-b961-20f2e1c522ba",
+            "violations": []
+        },
+        {
+            "path": "/Bringup Supply/",
+            "uuid_path": "/b119dbe0-3125-5f0c-b961-20f2e1c522ba/e5623bd2-b813-59a5-b47d-a912674f1d77",
+            "violations": []
+        }
+    ],
+    "source": "pmt-interface.kicad_sch"
+}

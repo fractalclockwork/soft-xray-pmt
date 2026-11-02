@@ -1,0 +1,4 @@
+(fp_lib_table
+  (version 7)
+  (lib (name "XP3312")(type "KiCad")(uri "${KIPRJMOD}/libraries/XP3312.pretty")(options "")(descr "XP3312 tube + wrap header footprints"))
+)

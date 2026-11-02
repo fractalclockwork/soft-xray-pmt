@@ -1,0 +1,37 @@
+* Simplified XP3312 anode response to a photon-like charge pulse
+* Type A bias at -1000 V; anode load 1.1Meg (stock R2)
+* Iph pulse area ~ 36 pC, Tw = 10 ns
+* Run: ngspice -b anode_pulse.cir
+
+Vhv K 0 DC -1000
+
+R10 K  D1  4.4Meg
+R11 D1 D2  3.3Meg
+R12 D2 D3  3.3Meg
+R13 D3 D4  3.3Meg
+R14 D4 D5  2.2Meg
+R15 D5 D6  2.2Meg
+R16 D6 D7  2.2Meg
+R17 D7 D8  2.2Meg
+R18 D8 0   1.1Meg
+
+Ra A 0 1.1Meg
+Rsense A Ascope 47
+Rscope Ascope 0 1Meg
+Cscope Ascope 0 15p
+
+* Electrons to anode ⇒ conventional current out of A into Ra (A→0).
+* Ipk = 36pC / 10ns = 3.6 mA
+Iph A 0 PULSE(0 3.6m 50n 0.5n 0.5n 10n 1)
+
+.tran 0.2n 200n
+
+.control
+  run
+  meas tran a_min MIN v(A) from=40n to=120n
+  meas tran a_max MAX v(A) from=40n to=120n
+  echo A_MIN = $&a_min
+  echo A_MAX = $&a_max
+.endc
+
+.end

@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# KiCad
+*-backups/
+*.wbk
+fp-info-cache
+\#auto_saved_files\#
+~*
+.history/
+*.lck
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*~

@@ -1,0 +1,31 @@
+* XP3312 Type A dynode divider — DC bias check (bringup)
+* Ratios 2 : 1.5 : 1.5 : 1.5 : 1 : 1 : 1 : 1 : 0.5  (unit 2.2M, total 24.2M)
+* Run: ngspice -b type_a_divider.cir
+
+Vhv K 0 DC -1000
+
+R10 K  D1  4.4Meg
+R11 D1 D2  3.3Meg
+R12 D2 D3  3.3Meg
+R13 D3 D4  3.3Meg
+R14 D4 D5  2.2Meg
+R15 D5 D6  2.2Meg
+R16 D6 D7  2.2Meg
+R17 D7 D8  2.2Meg
+R18 D8 0   1.1Meg
+
+.control
+  op
+  echo TAP_K = $&v(K)
+  echo TAP_D1 = $&v(D1)
+  echo TAP_D2 = $&v(D2)
+  echo TAP_D3 = $&v(D3)
+  echo TAP_D4 = $&v(D4)
+  echo TAP_D5 = $&v(D5)
+  echo TAP_D6 = $&v(D6)
+  echo TAP_D7 = $&v(D7)
+  echo TAP_D8 = $&v(D8)
+  echo I_STRING = $&i(Vhv)
+.endc
+
+.end

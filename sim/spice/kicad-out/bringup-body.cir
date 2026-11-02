@@ -1,0 +1,15 @@
+.title KiCad schematic
+.title bringup-supply Gate 0c (KiCad export)
+Vhv /-HV GND DC -1000 
+Rbleed /-HV GND 22Meg
+R10 /-HV /D1 4.4Meg
+R11 /D1 /D2 3.3Meg
+R13 /D3 /D4 3.3Meg
+R12 /D2 /D3 3.3Meg
+R14 /D4 /D5 2.2Meg
+R15 /D5 /D6 2.2Meg
+R16 /D6 /D7 2.2Meg
+R17 /D7 /D8 2.2Meg
+R18 /D8 GND 1.1Meg
+Ra /A GND 1.1Meg
+Iph /A GND PULSE( 0 3.6m 50n 0.5n 0.5n 10n 1 ) 
