@@ -1,4 +1,4 @@
-ERC report (2026-11-02T13:13:24, Encoding UTF8)
+ERC report (2026-11-02T16:27:45, Encoding UTF8)
 Report includes: Errors, Warnings
 
 ***** Sheet /
@@ -106,6 +106,9 @@ Report includes: Errors, Warnings
     @(238.76 mm, 102.87 mm): Symbol GND3 [GND]
 [lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
     ; warning
+    @(17.78 mm, 44.45 mm): Symbol Vhv [VDC]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
     @(38.10 mm, 16.51 mm): Symbol J3 [TERM2]
 [lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
     ; warning
@@ -154,6 +157,15 @@ Report includes: Errors, Warnings
     @(190.50 mm, 66.04 mm): Symbol J4 [HDR14]
 [lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
     ; warning
+    @(193.04 mm, 48.26 mm): Symbol Iph [IPULSE]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(208.28 mm, 48.26 mm): Symbol Ra [R]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
+    @(218.44 mm, 48.26 mm): Symbol Ca [C]
+[lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
+    ; warning
     @(233.68 mm, 43.18 mm): Symbol R19 [R]
 [lib_symbol_issues]: The current configuration does not include the symbol library 'bringup'
     ; warning
@@ -166,12 +178,48 @@ Report includes: Errors, Warnings
     @(254.00 mm, 48.26 mm): Symbol J5 [BNC]
 
 ***** Sheet /Bringup Supply/
-[multiple_net_names]: Both -HV and K are attached to the same items; -HV will be used in the netlist
+[same_local_global_label]: Local and global labels have same name
     ; warning
-    @(38.10 mm, 8.89 mm): Label '-HV'
-    @(96.52 mm, 31.75 mm): Label 'K'
+    @(38.10 mm, 8.89 mm): Global Label 'K'
+    @(110.49 mm, 121.92 mm): Label 'K'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(96.52 mm, 46.99 mm): Global Label 'D2'
+    @(43.18 mm, 130.81 mm): Label 'D2'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(96.52 mm, 85.09 mm): Global Label 'D7'
+    @(72.39 mm, 77.47 mm): Label 'D7'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(96.52 mm, 92.71 mm): Global Label 'D8'
+    @(81.28 mm, 78.74 mm): Label 'D8'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(175.26 mm, 66.04 mm): Global Label 'D5'
+    @(49.53 mm, 83.82 mm): Label 'D5'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(175.26 mm, 68.58 mm): Global Label 'D4'
+    @(43.18 mm, 90.17 mm): Label 'D4'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(175.26 mm, 71.12 mm): Global Label 'D3'
+    @(38.10 mm, 121.92 mm): Label 'D3'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(205.74 mm, 63.50 mm): Global Label 'D6'
+    @(231.14 mm, 107.95 mm): Label 'D6'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(205.74 mm, 73.66 mm): Global Label 'D1'
+    @(58.42 mm, 142.24 mm): Label 'D1'
+[same_local_global_label]: Local and global labels have same name
+    ; warning
+    @(222.25 mm, 43.18 mm): Global Label 'A'
+    @(90.17 mm, 83.82 mm): Label 'A'
 
- ** ERC messages: 55  Errors 0  Warnings 55
+ ** ERC messages: 68  Errors 0  Warnings 68
 
  ** Ignored checks:
     - Global label only appears once in the schematic

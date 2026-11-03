@@ -1013,13 +1013,31 @@ def write_bringup_sch() -> Path:
 def main() -> None:
     import sys
 
+    argv = sys.argv[1:]
+    out = ROOT / "bringup-supply.kicad_sch"
+
+    # Validate tracked schematic only — never overwrite after Gate 3.
+    if "--validate" in argv and "--force-write" not in argv:
+        if not out.is_file():
+            raise SystemExit(f"missing tracked schematic: {out}")
+        rc = validate_bringup(out)
+        if rc != 0:
+            raise SystemExit(rc)
+        print("OK — validated tracked", out, "(no write)")
+        raise SystemExit(0)
+
+    if out.is_file() and "--force-write" not in argv:
+        raise SystemExit(
+            f"refusing to overwrite tracked {out}\n"
+            "  After Gate 3, edit the schematic in Eeschema and run --validate.\n"
+            "  Use --force-write only when the operator asks to regenerate from the generator."
+        )
+
     out = write_bringup_sch()
     rc = validate_bringup(out)
     if rc != 0:
         raise SystemExit(rc)
-    print("OK")
-    if "--validate" in sys.argv:
-        raise SystemExit(0)
+    print("OK — wrote", out)
 
 
 if __name__ == "__main__":

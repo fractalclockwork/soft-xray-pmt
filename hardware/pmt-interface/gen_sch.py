@@ -976,10 +976,24 @@ def main() -> None:
 
     import gen_bringup_sch
 
-    bringup = gen_bringup_sch.write_bringup_sch()
-    rc_b = gen_bringup_sch.validate_bringup(bringup)
+    argv = sys.argv[1:]
+    bringup = ROOT / "bringup-supply.kicad_sch"
+
+    # Prefer tracked bringup-supply.kicad_sch (Gate 3+). Do not overwrite unless asked.
+    if bringup.is_file() and "--force-bringup-write" not in argv:
+        rc_b = gen_bringup_sch.validate_bringup(bringup)
+    else:
+        bringup = gen_bringup_sch.write_bringup_sch()
+        rc_b = gen_bringup_sch.validate_bringup(bringup)
     if rc_b != 0:
         raise SystemExit(rc_b)
+
+    if "--validate" in argv and "--force-write" not in argv:
+        out = ROOT / f"{PROJECT}.kicad_sch"
+        if not out.is_file():
+            raise SystemExit(f"missing tracked schematic: {out}")
+        rc = validate(out)
+        raise SystemExit(rc)
 
     write_symbol_lib()
     write_project()
@@ -988,12 +1002,10 @@ def main() -> None:
     print("wrote", out, "bytes", out.stat().st_size)
     print("paren balance", out.read_text().count("(") - out.read_text().count(")"))
     if str(BRINGUP_SHEET_FILE_UUID) not in bringup.read_text():
-        print("WARN: bringup-supply UUID mismatch — regenerate gen_bringup_sch.py")
+        print("WARN: bringup-supply UUID mismatch — check tracked sheet / gen_bringup_sch.py")
     rc = validate(out)
     if rc != 0:
         raise SystemExit(rc)
-    if "--validate" in sys.argv:
-        raise SystemExit(0)
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "/home/plastic/src/photomultipler-tube/hardware/pmt-interface/bringup-supply.kicad_sch")
-		(date "2026-11-02T14:11:54")
+		(date "2026-11-02T17:23:09")
 		(tool "Eeschema 10.0.7-10.0.7~ubuntu24.04.1")
 		(sheet
 			(number "1")
@@ -75,11 +75,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(property
 				(name "exclude_from_bom")
@@ -127,11 +127,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(property
 				(name "exclude_from_bom")
@@ -179,11 +179,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -222,11 +222,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -268,11 +268,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -350,11 +350,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -396,11 +396,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -442,11 +442,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -488,11 +488,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -534,11 +534,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -580,11 +580,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -626,11 +626,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -672,11 +672,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -718,11 +718,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -764,11 +764,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -810,11 +810,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -856,11 +856,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")
@@ -902,11 +902,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(property
 				(name "exclude_from_bom")
@@ -954,11 +954,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(property
 				(name "exclude_from_bom")
@@ -1006,11 +1006,11 @@
 			)
 			(property
 				(name "Sheetname")
-				(value "Root")
+				(value "bringup-supply")
 			)
 			(property
 				(name "Sheetfile")
-				(value "hardware/pmt-interface/bringup-supply.kicad_sch")
+				(value "bringup-supply.kicad_sch")
 			)
 			(sheetpath
 				(names "/")

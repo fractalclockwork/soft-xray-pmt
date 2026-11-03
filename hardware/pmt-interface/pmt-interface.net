@@ -2,7 +2,7 @@
 	(version "E")
 	(design
 		(source "/home/plastic/src/photomultipler-tube/hardware/pmt-interface/pmt-interface.kicad_sch")
-		(date "2026-11-02T13:13:16")
+		(date "2026-11-02T16:27:37")
 		(tool "Eeschema 10.0.7-10.0.7~ubuntu24.04.1")
 		(sheet
 			(number "1")
@@ -59,7 +59,7 @@
 			(title_block
 				(title "bringup-supply")
 				(company)
-				(rev "0.3-netfix-equiv")
+				(rev "0.5-stuff-annot")
 				(date "2026-11-02")
 				(source "bringup-supply.kicad_sch")
 				(comment
@@ -68,7 +68,7 @@
 				)
 				(comment
 					(number "2")
-					(value "2.2M/3.3M network redraw gated: Gate0b operator + SPICE PASS")
+					(value "Gate A: STUFF annotations for 2.2M/3.3M — no R10A sch redraw")
 				)
 				(comment
 					(number "3")
@@ -1983,6 +1983,45 @@
 		)
 		(libpart
 			(lib "bringup")
+			(part "IPULSE")
+			(fields
+				(field
+					(name "Reference") "I")
+				(field
+					(name "Value") "IPULSE")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Sim.Pins") "1=+ 2=-")
+				(field
+					(name "Sim.Device") "I")
+				(field
+					(name "Sim.Type") "PULSE")
+				(field
+					(name "Sim.Params") "y1=0 y2=3.6m td=50n tr=0.5n tf=0.5n tw=10n per=1")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "bringup")
 			(part "JMP")
 			(fields
 				(field
@@ -2070,6 +2109,43 @@
 				(pin
 					(num "2")
 					(name "GND")
+					(type "passive")
+				)
+			)
+		)
+		(libpart
+			(lib "bringup")
+			(part "VDC")
+			(fields
+				(field
+					(name "Reference") "V")
+				(field
+					(name "Value") "VDC")
+				(field
+					(name "Footprint")
+				)
+				(field
+					(name "Datasheet")
+				)
+				(field
+					(name "Description")
+				)
+				(field
+					(name "Sim.Pins") "1=+ 2=-")
+				(field
+					(name "Sim.Device") "V")
+				(field
+					(name "Sim.Type") "DC")
+			)
+			(pins
+				(pin
+					(num "1")
+					(name "")
+					(type "passive")
+				)
+				(pin
+					(num "2")
+					(name "")
 					(type "passive")
 				)
 			)
@@ -2451,221 +2527,6 @@
 		)
 		(net
 			(code "3")
-			(name "/Bringup Supply/-HV")
-			(class "Default")
-			(node
-				(ref "J3")
-				(pin "1")
-				(pinfunction "-HV_1")
-				(pintype "passive")
-			)
-			(node
-				(ref "J4")
-				(pin "7")
-				(pinfunction "7_7")
-				(pintype "passive")
-			)
-			(node
-				(ref "R10")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "Rbleed")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "4")
-			(name "/Bringup Supply/A")
-			(class "Default")
-			(node
-				(ref "C4")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "JMP_DC")
-				(pin "1")
-				(pintype "passive")
-			)
-			(node
-				(ref "R19")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "5")
-			(name "/Bringup Supply/D1")
-			(class "Default")
-			(node
-				(ref "J4")
-				(pin "8")
-				(pinfunction "8_8")
-				(pintype "passive")
-			)
-			(node
-				(ref "R10")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R11")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "6")
-			(name "/Bringup Supply/D2")
-			(class "Default")
-			(node
-				(ref "J4")
-				(pin "9")
-				(pinfunction "9_9")
-				(pintype "passive")
-			)
-			(node
-				(ref "R11")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R12")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "7")
-			(name "/Bringup Supply/D3")
-			(class "Default")
-			(node
-				(ref "J4")
-				(pin "6")
-				(pinfunction "6_6")
-				(pintype "passive")
-			)
-			(node
-				(ref "R12")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R13")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "8")
-			(name "/Bringup Supply/D4")
-			(class "Default")
-			(node
-				(ref "J4")
-				(pin "5")
-				(pinfunction "5_5")
-				(pintype "passive")
-			)
-			(node
-				(ref "R13")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R14")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "9")
-			(name "/Bringup Supply/D5")
-			(class "Default")
-			(node
-				(ref "J4")
-				(pin "4")
-				(pinfunction "4_4")
-				(pintype "passive")
-			)
-			(node
-				(ref "R14")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R15")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "10")
-			(name "/Bringup Supply/D6")
-			(class "Default")
-			(node
-				(ref "J4")
-				(pin "12")
-				(pinfunction "12_12")
-				(pintype "passive")
-			)
-			(node
-				(ref "R15")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R16")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "11")
-			(name "/Bringup Supply/D7")
-			(class "Default")
-			(node
-				(ref "J4")
-				(pin "3")
-				(pinfunction "3_3")
-				(pintype "passive")
-			)
-			(node
-				(ref "R16")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R17")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "12")
-			(name "/Bringup Supply/D8")
-			(class "Default")
-			(node
-				(ref "J4")
-				(pin "2")
-				(pinfunction "2_2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R17")
-				(pin "2")
-				(pintype "passive")
-			)
-			(node
-				(ref "R18")
-				(pin "1")
-				(pintype "passive")
-			)
-		)
-		(net
-			(code "13")
 			(name "/Bringup Supply/HV_SENSE")
 			(class "Default")
 			(node
@@ -2685,7 +2546,7 @@
 			)
 		)
 		(net
-			(code "14")
+			(code "4")
 			(name "/D1")
 			(class "Default")
 			(node
@@ -2702,7 +2563,7 @@
 			)
 		)
 		(net
-			(code "15")
+			(code "5")
 			(name "/D2")
 			(class "Default")
 			(node
@@ -2719,7 +2580,7 @@
 			)
 		)
 		(net
-			(code "16")
+			(code "6")
 			(name "/D3")
 			(class "Default")
 			(node
@@ -2736,7 +2597,7 @@
 			)
 		)
 		(net
-			(code "17")
+			(code "7")
 			(name "/D4")
 			(class "Default")
 			(node
@@ -2753,7 +2614,7 @@
 			)
 		)
 		(net
-			(code "18")
+			(code "8")
 			(name "/D5")
 			(class "Default")
 			(node
@@ -2770,7 +2631,7 @@
 			)
 		)
 		(net
-			(code "19")
+			(code "9")
 			(name "/D6")
 			(class "Default")
 			(node
@@ -2787,7 +2648,7 @@
 			)
 		)
 		(net
-			(code "20")
+			(code "10")
 			(name "/D7")
 			(class "Default")
 			(node
@@ -2804,7 +2665,7 @@
 			)
 		)
 		(net
-			(code "21")
+			(code "11")
 			(name "/D8")
 			(class "Default")
 			(node
@@ -2826,7 +2687,7 @@
 			)
 		)
 		(net
-			(code "22")
+			(code "12")
 			(name "/J1.13")
 			(class "Default")
 			(node
@@ -2842,7 +2703,7 @@
 			)
 		)
 		(net
-			(code "23")
+			(code "13")
 			(name "/K")
 			(class "Default")
 			(node
@@ -2863,7 +2724,195 @@
 			)
 		)
 		(net
-			(code "24")
+			(code "14")
+			(name "A")
+			(class "Default")
+			(node
+				(ref "C4")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "JMP_DC")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "R19")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "15")
+			(name "D1")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "8")
+				(pinfunction "8_8")
+				(pintype "passive")
+			)
+			(node
+				(ref "R10")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R11")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "16")
+			(name "D2")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "9")
+				(pinfunction "9_9")
+				(pintype "passive")
+			)
+			(node
+				(ref "R11")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R12")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "17")
+			(name "D3")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "6")
+				(pinfunction "6_6")
+				(pintype "passive")
+			)
+			(node
+				(ref "R12")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R13")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "18")
+			(name "D4")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "5")
+				(pinfunction "5_5")
+				(pintype "passive")
+			)
+			(node
+				(ref "R13")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R14")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "19")
+			(name "D5")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "4")
+				(pinfunction "4_4")
+				(pintype "passive")
+			)
+			(node
+				(ref "R14")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R15")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "20")
+			(name "D6")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "12")
+				(pinfunction "12_12")
+				(pintype "passive")
+			)
+			(node
+				(ref "R15")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R16")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "21")
+			(name "D7")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "3")
+				(pinfunction "3_3")
+				(pintype "passive")
+			)
+			(node
+				(ref "R16")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R17")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "22")
+			(name "D8")
+			(class "Default")
+			(node
+				(ref "J4")
+				(pin "2")
+				(pinfunction "2_2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R17")
+				(pin "2")
+				(pintype "passive")
+			)
+			(node
+				(ref "R18")
+				(pin "1")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "23")
 			(name "GND")
 			(class "Default")
 			(node
@@ -2954,6 +3003,33 @@
 			(node
 				(ref "Rbleed")
 				(pin "2")
+				(pintype "passive")
+			)
+		)
+		(net
+			(code "24")
+			(name "K")
+			(class "Default")
+			(node
+				(ref "J3")
+				(pin "1")
+				(pinfunction "-HV_1")
+				(pintype "passive")
+			)
+			(node
+				(ref "J4")
+				(pin "7")
+				(pinfunction "7_7")
+				(pintype "passive")
+			)
+			(node
+				(ref "R10")
+				(pin "1")
+				(pintype "passive")
+			)
+			(node
+				(ref "Rbleed")
+				(pin "1")
 				(pintype "passive")
 			)
 		)

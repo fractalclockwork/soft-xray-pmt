@@ -1,7 +1,8 @@
 # HV power and sense bring-up
 
-Ordered guides for biasing the XP3312/SQ through the verified Philips filter/breakout
-board. **Refuse later stages until the prior gate/stage is PASS.** Do not raise
+**Role:** index and status table for the HV bring-up ladder. Ordered guides for
+biasing the XP3312/SQ through the verified Philips filter/breakout board.
+**Refuse later stages until the prior gate/stage is PASS.** Do not raise
 [`ceilings.md`](ceilings.md) limits to pass a stage.
 
 Prior work (complete — not an HV stage): tube↔J1 continuity map —
@@ -13,10 +14,11 @@ Prior work (complete — not an HV stage): tube↔J1 continuity map —
 | ID | Guide | Energize | Cap | Status |
 |---|---|---|---|---|
 | Prior | Continuity map | No | 0 V | **PASS** (2026-11-01) |
+| Gate PCB | [gate-pcb-bringup.md](gate-pcb-bringup.md) | No | 0 V | **PASS** (2026-11-02) — bringup-supply sch→PCB |
 | Gate 0 | [gate-0-design.md](gate-0-design.md) | No | 0 V | **PASS** — ceilings + equiv sch + BOM policy |
-| Gate 0b | [gate-0-sch-verify.md](gate-0-sch-verify.md) | No | 0 V | **PASS** — operator |
+| Gate 0b | [gate-0-sch-verify.md](gate-0-sch-verify.md) | No | 0 V | **PASS** — operator (= PCB Gate 3) |
 | Gate 0c | [gate-0-spice.md](gate-0-spice.md) | No | 0 V | **PASS** — mech + operator KiCad |
-| Gate A | [gate-a-build.md](gate-a-build.md) | No | 0 V | **Open (on hold)** — stuff 2.2M/3.3M per BOM annot |
+| Gate A | [gate-a-build.md](gate-a-build.md) | No | 0 V | **Open — ready to stuff** |
 | Gate B | [gate-b-cold.md](gate-b-cold.md) | No | 0 V | Open |
 | Gate C | [gate-c-dark.md](gate-c-dark.md) | No | 0 V | Open |
 | Stage 1 | [stage-1-smoke.md](stage-1-smoke.md) | Yes | **100 V** | Open |
@@ -37,8 +39,9 @@ Schematic page 2: [`../../hardware/pmt-interface/bringup-supply.kicad_sch`](../.
 ```text
 Prior continuity PASS
   → Gate 0 design + equiv schematic (shorts fixed)
-  → Gate 0b operator sch verify
+  → Gate 0b operator sch verify          ← also PCB Gate 3
   → Gate 0c SPICE mech + **operator** KiCad verify
+  → Gate PCB bringup-supply (place → operator → layers → DRC → operator)
   → Gate A build (stuff 2.2M/3.3M per bom-divider; sch equiv + STUFF notes)
   → Gate B unpowered verify
   → Gate C optical dark-safe
@@ -52,6 +55,10 @@ Prior continuity PASS
   → Stage 8  air-gap OTA / onboard log
 ```
 
+Shared gated sch→PCB process: personal skill `kicad-gated-sch-pcb`.  
+Bring-up instance: [`design-process.md`](design-process.md), [`../../hardware/pmt-interface/AGENTS.md`](../../hardware/pmt-interface/AGENTS.md).  
+Filter clone `pmt-interface.kicad_pcb` is an analogue of the stock board — outside this ladder.
+
 ## Electrical summary
 
 - HV from external **variable regulated** PSU (−HV on K); Type A string unit **2.2 MΩ**, total **24.2 MΩ** (primary bleeder).
@@ -63,5 +70,5 @@ Prior continuity PASS
 ## Sibling methodology
 
 Same evidence culture as spectrometer-lab (Gate A pre-power), rad-lab (encoded
-ceilings), cinemate-gateway (scope/capture lane before Pico integration), and
-crt-drive (prove safe path before hazardous load).
+ceilings), cinemate-gateway (PCB sch→place→layer→DRC operator stops; reference
+for Gate PCB on bringup-supply), and crt-drive (prove safe path before hazardous load).

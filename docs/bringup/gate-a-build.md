@@ -1,7 +1,8 @@
 # Gate A — Build divider + anode measurement
 
-**Energize:** No (0 V). **Prior:** Gate 0b + Gate 0c **operator** PASS.
-**Status:** Open (**on hold**).
+**Energize:** No (0 V). **Prior:** Gate 0b + Gate 0c **operator** PASS;
+Gate PCB ([`gate-pcb-bringup.md`](gate-pcb-bringup.md)) Gate **10** **PASS**.
+**Status:** Open — ready to stuff.
 
 Page-2 stays on **segment equivalents** (R10=4.4M … R18=1.1M) for sim / validate /
 test. Gate A **assembles**; Gate B is the first measurement of stuffed networks.

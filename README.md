@@ -22,8 +22,9 @@ Unpowered DMM checks locked the tube↔header map and corrected the filter clust
 | KiCad project | [`hardware/pmt-interface/`](hardware/pmt-interface/) |
 | Schematic (page 1 filter) | [`hardware/pmt-interface/pmt-interface.kicad_sch`](hardware/pmt-interface/pmt-interface.kicad_sch) |
 | Schematic (page 2 bringup) | [`hardware/pmt-interface/bringup-supply.kicad_sch`](hardware/pmt-interface/bringup-supply.kicad_sch) |
-| Filter PCB (2-layer clone) | [`hardware/pmt-interface/pmt-interface.kicad_pcb`](hardware/pmt-interface/pmt-interface.kicad_pcb) |
-| PCB preview | [`docs/pmt-interface-pcb.pdf`](docs/pmt-interface-pcb.pdf) |
+| Filter PCB (2-layer analogue) | [`hardware/pmt-interface/pmt-interface.kicad_pcb`](hardware/pmt-interface/pmt-interface.kicad_pcb) |
+| Bring-up supply PCB | [`hardware/pmt-interface/bringup-supply.kicad_pcb`](hardware/pmt-interface/bringup-supply.kicad_pcb) |
+| Filter PCB preview | [`docs/pmt-interface-pcb.pdf`](docs/pmt-interface-pcb.pdf) |
 | Circular pin map | [`docs/tube-pin-map.md`](docs/tube-pin-map.md) |
 | PDF preview | [`docs/pmt-interface-draft.pdf`](docs/pmt-interface-draft.pdf) |
 | Photo BOM / traces | [`docs/photo-bom.md`](docs/photo-bom.md), [`docs/photo-trace-map.md`](docs/photo-trace-map.md) |
@@ -43,20 +44,20 @@ Gated ladder: design/build divider + anode measure **before** any HV; dark ramp 
 | Gate 0 design | [`docs/bringup/gate-0-design.md`](docs/bringup/gate-0-design.md) (**PASS**) |
 | Gate 0b sch verify | [`docs/bringup/gate-0-sch-verify.md`](docs/bringup/gate-0-sch-verify.md) (**PASS**) |
 | Gate 0c SPICE | [`docs/bringup/gate-0-spice.md`](docs/bringup/gate-0-spice.md) — KiCad (**PASS**) |
-| Next | Gate A **on hold** — stuff per [`bom-divider.md`](docs/bringup/bom-divider.md) (sch stays equiv) → B → C → Stages 1–8 |
+| Gate PCB bringup-supply | [`docs/bringup/gate-pcb-bringup.md`](docs/bringup/gate-pcb-bringup.md) (**PASS** 2026-11-02) |
+| Next | Gate A stuff per [`bom-divider.md`](docs/bringup/bom-divider.md) → B → C → Stages 1–8 |
 
 Ceilings (first pass): Stage 1 **100 V** → Stage 2 **400 V** → Stage 3 **800 V** → Stage 4 **1000 V** dark; abs max **1500 V**.
 
-Regenerate after editing the generator:
+Gated sch→PCB: skill `kicad-gated-sch-pcb`; instance [`docs/bringup/design-process.md`](docs/bringup/design-process.md), commands [`hardware/pmt-interface/AGENTS.md`](hardware/pmt-interface/AGENTS.md).  
+Schematic routing: [`.cursor/skills/kicad-schematic-routing/SKILL.md`](.cursor/skills/kicad-schematic-routing/SKILL.md).
 
 ```bash
-python3 hardware/pmt-interface/gen_fp.py          # tube footprint only
-python3 hardware/pmt-interface/gen_bringup_sch.py # page 2 Type A divider + anode
-python3 hardware/pmt-interface/gen_sch.py         # page 1 filter + hier link; --validate
-python3 hardware/pmt-interface/gen_pcb.py         # photo-matched 2-layer filter PCB
+python3 hardware/pmt-interface/gen_bringup_sch.py --validate   # tracked sch; no overwrite
+python3 hardware/pmt-interface/gen_fp.py
+python3 hardware/pmt-interface/gen_sch.py --validate          # page 1; does not rewrite bringup sch
+python3 hardware/pmt-interface/gen_pcb.py                     # filter analogue (outside Gate PCB)
 ```
-
-Schematic routing: [`.cursor/skills/kicad-schematic-routing/SKILL.md`](.cursor/skills/kicad-schematic-routing/SKILL.md).
 
 ## Tube identity
 
