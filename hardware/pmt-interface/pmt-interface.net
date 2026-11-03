@@ -1,7 +1,7 @@
 (export
 	(version "E")
 	(design
-		(source "/home/plastic/src/photomultipler-tube/hardware/pmt-interface/pmt-interface.kicad_sch")
+		(source "/home/plastic/src/soft-xray-pmt/hardware/pmt-interface/pmt-interface.kicad_sch")
 		(date "2026-11-02T16:27:37")
 		(tool "Eeschema 10.0.7-10.0.7~ubuntu24.04.1")
 		(sheet

@@ -83,7 +83,7 @@ Prefer 45° when possible: choose intermediate points so `|Δx| == |Δy|` on dia
 3. If a junction appears wrongly: delete the junction object; confirm nets in the net navigator.
 4. For circular symbols: route radial stubs first, then 45° into the bus.
 
-## Project conventions (photomultipler-tube)
+## Project conventions (soft-xray-pmt)
 
 - Tube symbol pins follow the **PCB footprint circle** (`tube_geo.py`): SP south, 1..19 clockwise, pins facing you.
 - Schematic pin **tips** sit on that circle; pin **orientation** is snapped to 0/90/180/270 (`outward_pin_angle`) — KiCad rejects non-cardinal pin angles on load.

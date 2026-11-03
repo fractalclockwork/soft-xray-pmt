@@ -1,4 +1,4 @@
-# Photomultiplier Tube (XP3312/SQ) — soft X-ray detector, stage 1
+# soft-xray-pmt — Soft X-ray PMT (XP3312/SQ), stage 1
 
 This repo is the **first stage** of a soft X-ray detector: power and sense bring-up for a surplus Photonis **XP3312/SQ** (SN 294056) on a wooden harness with its stock Philips medical I/O filter board (dual-row header + coax + local R/C). The board is a **filter/breakout**, not a full dynode divider — the Type A HV string and anode path are designed here before later detector integration. **No HV applied yet.**
 
@@ -93,4 +93,3 @@ J1.1 / 10 / 11: photo-consistent NC (pads, no fan-out); DMM still required (11 l
 SPDX-License-Identifier: `CERN-OHL-S-2.0`
 
 Hardware sources and accompanying project materials are under the [CERN Open Hardware Licence Version 2 - Strongly Reciprocal](LICENSE). See also [`NOTICE`](NOTICE).
-# photomultipler-tube
